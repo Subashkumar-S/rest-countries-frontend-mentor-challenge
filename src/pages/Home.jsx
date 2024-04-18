@@ -5,7 +5,7 @@ import Panel from "../components/Panel";
 
 export default function Home() {
     return (
-        <section className="w-full min-h-full bg-veryDarkBlue text-white font-nunito ">
+        <section className="w-full min-h-[100vh] bg-veryDarkBlue text-white font-nunito ">
             <Header />
             <Panel />
             <Container />

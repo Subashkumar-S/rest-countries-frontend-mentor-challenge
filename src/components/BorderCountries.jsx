@@ -1,16 +1,19 @@
 import BorderCountry from "./BorderCountry";
 
-export default function BorderCountries(){
+export default function BorderCountries({ borderCountries }) {
 
-    const borderCountries = ["Congo", "Zambia", "Namibia", "Congo", "Zambia"];
 
-    return(
+    return (
         <div className="flex gap-4 items-center flex-wrap">
-            <h5 className=" text-lg basis-56 flex-1 ">Border Countries :</h5>
+            <h5 className=" text-lg basis-56">Border Countries :</h5>
             <ul className="flex gap-2 flex-wrap" >
-                { borderCountries.map((country) => (
-                    <BorderCountry key={country} name={country}/>
-                ))
+                {borderCountries.length == 0 ?
+                    <li>
+                        <p>No borders</p>
+                    </li> :
+                    borderCountries.map((country) => (
+                        <BorderCountry country={country} />
+                    ))
 
                 }
             </ul>

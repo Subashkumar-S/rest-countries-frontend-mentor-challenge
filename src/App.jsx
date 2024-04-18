@@ -7,7 +7,7 @@ export default function App() {
     <BrowserRouter>
       <Routes>
         <Route exact path="/" element={<Home />} />
-        <Route path="/country" element={<Country />} />
+        <Route path="/country/:id" element={<Country />} />
       </Routes>
     </BrowserRouter>
 
